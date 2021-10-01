@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "lib": [
+            "es2020"
+        ],
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "typeRoots": [
+            "./types"
+        ],
+        "outDir": "dist"
+    },
+    "exclude": [
+        "node_modules"
+    ],
+}

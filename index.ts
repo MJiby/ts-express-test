@@ -9,7 +9,9 @@ import passport from 'passport';
 import hpp from 'hpp';
 import helmet from 'helmet';
 
-import { sequelize } from './models';
+// import { sequelize } from './models';
+
+import userRouter from './routes/user'
 
 dotenv.config();
 const app = express();
@@ -54,7 +56,11 @@ app.use(expressSession({
         secure: false, // https -> true
         domain: prod ? '.nodebird.com' : undefined,
     },
-    name: 'rnbck',
+    name: 'tsstudy',
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use('/user', userRouter)
+
+
+const defaultRouter =
